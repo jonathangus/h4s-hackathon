@@ -1,0 +1,249 @@
+{
+  "name": ["Name", "Namn"],
+  "role": ["Role", "Roll"],
+  "roleSelect.title": ["My role is", "Min roll är"],
+  "roleSelect.other": [
+    "Our do you do something else?",
+    "Eller gör du något vi har missat?"
+  ],
+  "signup.roles": [
+    "Developer, Designer, Entrepreneur, Philosopher, Dreamer, Project Manager",
+    "Utvecklare, Designer, Entreprenör, Filosof, Drömmare, Projektledare"
+  ],
+  "team": ["Team", "Lag"],
+  "solo": ["Solo", "Ensam"],
+  "signup.enter": ["or press ENTER", "eller tryck ENTER"],
+  "roleSelect.placeholder": ["Write your roll here", "Skriv din roll här"],
+  "signupIntro.title": [
+    "Apply to Hack for Sweden 2019!",
+    "Ansök till Hack for Sweden 2019!"
+  ],
+  "signupIntro.date": [
+    "April 4th - 6th, Stockholmsmässan",
+    "4-6 April, Stockholmsmässan"
+  ],
+  "signupIntro.extra": [
+    "The first round of application is now over, but feel free to signup for the late admission where you still have a chance to be part of the hackathon.",
+    "Anmälan är nu stängd, alla efterregistreringar hamnar på en reservlista."
+  ],
+  "signupIntro.joinAs": ["I want to join as:", "Ansöker som"],
+  "signup.partner.title": ["Partner", "Partner"],
+  "signup.partner.description": [
+    "If you are part of a partner organization write it down below.",
+    "Om du är en del av en partnerorganisation skriv den nedan."
+  ],
+  "signup.name.title": ["Name", "Namn"],
+  "signup.email.title": ["Email", "Epost"],
+  "signup.description.title": ["Description", "Beskrivning"],
+  "signup.description.description": [
+    "Write something about yourself. What are your interests and skills for example",
+    "Skriv något om dig själv. Vilka är dina intressen och färdigheter t.ex."
+  ],
+  "signup.teamDescription.description": [
+    "Write something about your team. Why should your team be selected to compete in this hackathon?",
+    "Skriv något om ditt lag. Varför ska ditt lag väljas för vara med i detta hackathon?"
+  ],
+  "signup.complete": ["Complete registration", "Skicka in"],
+  "signup.continue": ["Continue", "Nästa steg"],
+  "signup.success.title": ["Thanks for applying!", "Tack för din ansökan!"],
+  "signup.success.message": [
+    "You’re probably curious if you have been selected to attend this year Hack for Sweden?! You’ll receive a notification at the latest on the 15 of March.",
+    "Vi kommer kontakta er med mer information."
+  ],
+  "signup.team.title": [
+    "Who are part of your team?",
+    "Vilka är del av ditt lag?"
+  ],
+  "signup.team.description": [
+    "A team can consist of maximum 8 members. Please write down each member and their role.",
+    "Ett lag kan bestå av högst 8 medlemmar. Skriv ner varje medlem och deras roll."
+  ],
+  "signup.team.add": ["Add member", "Lägg till lagmedlem"],
+  "signup.team.moreMembers": [
+    "We are interested of exanding our team with solo applicants",
+    "Vi kan tänka oss ha fler lagmedlemmar i vårat lag"
+  ],
+  "signup.category.title": ["Category", "Kategori"],
+  "signup.category.description": [
+    "Select minimum one category that you want to compete in."
+  ],
+  "signup.category.readMore": ["Read more about categories."],
+  "categories.readmore": ["Read more"],
+  "signupButton": ["Sign up", "Ansök nu"],
+  "signup.gdpr.title": ["Privacy Policy", "Integritetspolicy"],
+  "signup.gdpr.description": [
+    "Hack for Sweden care about your privacy. When you sign up you also accept that we collect and save your registered details. You have the right to be removed from our register upon request. Your registered details will be used only for communication before, after and during the event.",
+    "Hack for Sweden bryr sig om din integritet. När du registrerar dig accepterar du också att vi samlar in och sparar dina registrerade uppgifter. Du har rätt att tas bort från vårt register på begäran. Dina registrerade uppgifter kommer endast att användas för kommunikation före, efter och under evenemanget."
+  ],
+  "signup.gdpr.accept": ["I accept", "Jag godkänner"],
+  "prizes.desc": [
+    "All prizes include the possibility to realise the winning solution in collaboration with one of our partners, including incubators, start-up programs and other scale-up programs.",
+    "Alla priser inkluderar möjligheten att förverkliga den vinnande lösningen i samarbete med en av våra partners, inklusive inkubatorer, startprogram och andra uppskalningsprogram."
+  ],
+  "jury.title": ["The Jury", "Jury"],
+  "jury.secondaryTitle": ["Jury Criteria", "Kriterier"],
+  "jury.desc": [
+    "The Hack for Sweden Jury of 2019 will not be just one jury – we will have an Expert Jury for each Challenge category. The prestigious Hack for Sweden Award will be chosen by all 6 expert juries together.",
+    "Hack for Swedens jury 2019 kommer inte bara att vara en jury – vi kommer att ha en expertjury inom varje utmaningskategori. Det prestigefyllda Hack for Sweden Award kommer att väljas tillsammans av alla våra sex expertjuryer."
+  ],
+  "jury.criteria": [
+    "All submitted solutions will be evaluated according to the following criteria:",
+    "Alla inlämnade lösningar utvärderas enligt följande kriterier:"
+  ],
+  "jury.criteriaItems": [
+    "Comprehensibility, Realisability, Innovativeness, Scalability, Benefit for society, Return on value",
+    "Förståelse, Realisabilitet, Innovativitet, Skalbarhet, Samhällsförmåner, Avkastning på värde "
+  ],
+  "partner.faqLink": [
+    "Check out our FAQ with more partner questions",
+    "Vanliga frågor om partnerskap"
+  ],
+  "hackatonSection.categories": ["Categories", "Kategorier"],
+  "hackatonSection.prizes": ["Prizes", "Priser"],
+  "hackatonSection.jury": ["Jury", "Jury"],
+  "hackatonSection.schedule": ["Schedule", "Schema"],
+  "hackatonSection.globalGoals": ["17 global goals", "Globala målen"],
+  "hackatonSection.faqHacker": ["FAQ for Hackers", "Vanliga frågor"],
+  "hackatonSection.faqPartner": [
+    "FAQ for Partners",
+    "Vanliga frågor (partners)"
+  ],
+  "innovationWeekHeadline1": ["One week,", "En vecka,"],
+  "innovationWeekHeadline2": ["three events,", "tre evenemang"],
+  "innovationWeekHeadline3": [
+    "10 million possibilities.",
+    "10 miljoner möjligheter."
+  ],
+  "innovationWeekIntro": [
+    "In April 2019, we are for the very first time arranging Sweden Innovation Week! <a href='https://www.hackforsweden.se'>Hack for Sweden</a> ,  <a href='http://www.digigov.se' target='_blank'>DigiGov</a> and <a href='http://www.swedendemoday.com' target='_blank'>Sweden Demo Day</a> are teaming up to create an entire week of innovation. Come and join us in kick-starting the Swedish ecosystem for innovation!",
+    "I April 2019 anordnar vi för första gången Sweden Innovation Week! <a href='https://www.hackforsweden.se'> Hack for Sweden </a>, <a href='http://www.digigov.se' target='_blank'> DigiGov </a> och <a href='http://www.swedendemoday.com' target='_blank'>Sweden Demo Day </a> samarbetar för att skapa en hel vecka med innovation. Kom och var med oss och starta det svenska ekosystemet för innovation!"
+  ],
+  "innovationWeek.digi.title": ["DigiGov April 2nd-3rd", "DigiGov 2-3 April"],
+  "innovationWeek.digi.body": [
+    "<p>The lop level forum for a smarter Sweden. Over the course of two days, top decision-makers in the public sector, business and academia will conduct a strategic discussion on where the Swedish public sector is heading and what needs to be done. </p>Going to Hack for Sweden and/or Sweden Demo Day? Get more out of Sweden Innovation Week and join in DigiGov for the great discount price of only 5500SEK with the discount code <b>SIW19</b>! This special offer is valid from March 12th through March 26th</p>",
+    "<p>Loppnivåforumet för ett smartare Sverige. Under två dagar kommer de främsta beslutsfattarna inom den offentliga sektorn, näringslivet och akademin att göra en strategisk diskussion om var den svenska offentliga sektorn är på väg och vad som behöver vara gjort.</p> Ska du gå på Hack for Sweden eller Sweden Demo Day? Få mer ut av Sweden Innovation Week och gå med i DigiGov för det fantastiska rabattpriset på endast 5500 kr med rabattkoden <b>SIW19</b>! Detta specialerbjudanden gäller mellan 12 mars och 26 mars </p>"
+  ],
+  "innovationWeek.demoday.title": [
+    "Sweden Demo Day April 4th",
+    "Sweden Demo Day 4 April"
+  ],
+  "innovationWeek.demoday.body": [
+    "No speakers – no distractions. If you want traditional conference content, listen to TED. Clear your schedule for Sweden Demo Day! Come meet more than 600 exhibiting startup entrepreneurs and get to know them and their ideas better. The playing field is leveled as they all present themselves with nothing but our signature brown paper pitch. Sweden Demo Day is the largest and most spectacular un-conference for startups, investors and corporates in the digital realms. Since the very beginning, 2010, it is both driven and owned by the community. If you are participating in Hack for Sweden, as a hacker or a partner, you can pick up a free ticket for Sweden Demo Day",
+    "Inga talare - inga distraheringar. Om du vill ha traditionella konferensinnehåll, lyssna på TED. Töm ditt schema för Sweden Demo Day! Kom och träffa mer än 600 utställande entreprenörer och lära känna dem och deras idéer bättre. Sweden Demo Day är den största och mest spektakulära unkonferensen för nybörjare, investerare och företag i de digitala världarna. Sedan starten 2010 är det båda drivna och ägda av Om du deltar i Hack for Sweden, som hackare eller partner, kan du hämta en gratis biljett till Sweden Demo Day"
+  ],
+  "innovationWeek.h4s.title": [
+    "Hack for Sweden April 4th-6th",
+    "Hack for Sweden 4-6 April"
+  ],
+  "innovationWeek.h4s.body": [
+    "Hack for Sweden – Sweden’s new platform for citizendriven innovation, where public and private sector come together so create the society we dream of tomorrow. A hackathon where we don’t let the great ideas stay on post-its, we make the smart solutions for a sustainable society come to life! Come hack with us and be part of creating the Sweden we dream of tomorrow – Sweden 4.0. If you are going to Sweden Demo Day, you get free admission to Hack for Sweden Exhibition Area and Partner Track",
+    "Hack for Sweden - Sveriges nya plattform för innovativ innovation, där den offentliga och privata sektorn samlas, så skapa det samhälle vi drömmer om imorgon. En hackathon där vi inte låter de stora idéerna stanna kvar efter det, vi gör de smarta lösningarna för ett hållbart samhälle till liv! Kom hacka med oss och vara med och skapa det Sverige vi drömmer om - Sverige 4.0. Om du kommer till Sweden Demo Day får du fri entré till Hack for Swedens utställningsområde."
+  ],
+  "common.readMore": ["Read more", "Läs mer här"],
+  "schedule.title": ["Schedule", "Schema"],
+  "readmore.hackaton": [
+    "Read more about the hackaton",
+    "Läs mer om hackatonet"
+  ],
+  "readmore.themision": ["Read more about our mission", "Läs mer om vårt mål"],
+  "readmore.partner": [
+    "Read more about becoming a partner",
+    "Läs mer om partnerskap"
+  ],
+  "partner.colab": ["Collaborating Partners", "Collaborating Partners"],
+  "partner.event": ["Event Partners", "Event Partners"],
+  "news.title": ["Latest news", "Senaste nytt"],
+  "link.partner": ["Become a partner", "Bli partner"],
+  "link.signup": ["Sign up", "Ansök"],
+  "/": ["Welcome", "Welcome"],
+  "/open-data": ["Open data", "Öppna data"],
+  "/the-mission": ["The mission", "Uppdraget"],
+  "/our-community": ["Our Community", "Vår Community"],
+  "/team": ["Team", "Team"],
+  "/media": ["Media", "Media"],
+  "/sweden-innovation-week": [
+    "Sweden innovation week",
+    "Sweden innovation week"
+  ],
+  "/dream-for-sweden": ["Dream for Sweden", "Dream for Sweden"],
+  "/hackaton": ["Hack for Sweden 2019", "Hack for Sweden 2019"],
+  "/faq": ["FAQ", "Vanliga frågor"],
+  "/faq-partner": ["FAQ - partners", "Vanliga frågor - partners"],
+  "/press": ["Press", "Press"],
+  "/signup": ["Signup", "Ansök"],
+  "/partner": ["Partner", "Partner"],
+  "/challenges": ["Challenges", "Utmaningar"],
+  "footer.contact": ["Contact", "Kontakta oss"],
+  "projectManagement": ["Project management", "Projektledning"],
+  "steeringCommittee": ["Steering Committee", "Styrgrupp"],
+  "advisoryBoard": ["Our Advisory Board", "Rådgivare"],
+  "contactOscar": [
+    "Still have questions about the hackathon for hackers? Send an e-mail to our Community Manager ",
+    "Har du fler frågor? Skicka ett mail till vår Community Manager "
+  ],
+  "faq-partner.attention": ["Attention! ", "Se hit! "],
+  "faq-partner.attentionText": [
+    "A more detailed FAQ for our partners is available in the Slack channel for our partners.",
+    "Mer information för våra partners finns tillgänglig i Slack-kanalen."
+  ],
+  "faq-partner.contactPartner": [
+    "A partner but haven’t gotten an invite to the Slack channel? Contact Partner Manager",
+    "Är du partner men inte fått en inbjudan till Slack-kanalen? Kontakta"
+  ],
+  "faq-partner.ann": [
+    "Is your organization not a partner yet, but want to become one? Contact Head Project Manager Ann Molin",
+    "Är din organisation ännu inte en partner, men vill bli en? Kontakta Projektledare Ann Molin"
+  ],
+  "dream.text": [
+    "Hack for Sweden wants to invite the whole of Sweden to create tomorrow's dream community together with our over 80 partner organizations from both the public and private sectors.",
+    "Dream for Sweden Hack for Sweden vill bjuda in hela Sverige till att skapa morgondagens drömsamhälle tillsammans med våra över 80 partnerorganisationer från både offentlig och privat sektor."
+  ],
+  "dream.link": ["Visit site", "Besök sida"],
+  "schema.day1.title": ["Thursday April 4th", "Torsdag 4 april"],
+  "schema.day1.1": [
+    "Doors open to all hackers!",
+    "Dörrarna öppnas för alla hackare!"
+  ],
+  "schema.day1.2": ["Opening Ceremony", "Öppningsceremoni"],
+  "schema.day1.3": ["Hackathon start", "Hackatonet startar"],
+  "schema.day2.title": ["Friday April 5th", "Fredag 5 april"],
+  "schema.day2.1": [
+    "Partner Track  – workshops, keynotes and other activities for all our 88 partner organisations on all topics related to innovation and open data.",
+    "Partner Track, workshops, föreläsare och andra aktiviteter för alla våra 88 partnerorganisationer om alla ämnen relaterade till innovation och öppna data."
+  ],
+  "schema.day3.title": ["Saturday April 6th", "Lördag 6 April"],
+  "schema.day3.1": ["Submission deadline", "Lösning lämnas in"],
+  "schema.day3.2": [
+    "Award Ceremony on Main Stage",
+    "Prisutdelning på stora Scen"
+  ],
+  "schema.day3.3": [
+    "See you at Hack for Sweden 2020",
+    "Vi ses på Hack for Sweden 2020"
+  ],
+  "winnerOf": ["winner of", "pris på"],
+  "swedenAward": [
+    "winner of the Hack for Sweden Cup and ",
+    "vinnare av Hack for Sweden cup och ett pris på "
+  ],
+  "globalGoals.title": ["The 17 global goals", "De 17 globala målen"],
+  "you?": ["You?", "Du?"],
+  "hackaton.titles": [
+    "Developer, Designer, Entrepreneur, Philosopher, Dreamer",
+    "Utvecklare, Designer, Entreprenör, Filosof, Drömmare"
+  ],
+  "challenges.title": ["Challenges", "Utmaningar"],
+  "challenges.first": [
+    "Hack for Sweden 2019 is all about sustainability and creating real tools for the good of our society. Our overall framework is Agenda 2030 and the UN:s 17 global goals. The 6 categories for this year’s hackathon are the 6 most datamature areas, identified by Gartner on behalf of the Swedish Government in 2018",
+    "Hack för Sweden 2019 handlar om hållbarhet och skapar verkliga verktyg för vårt samhälls bästa. Vår övergripande ram är Agenda 2030 och FN: s 17 globala mål. De 6 kategorierna för årets hackathon är de 6 mest datamatiska områdena, som Gartner på regeringens vägnar år 2018 utsåg"
+  ],
+  "challenges.second": [
+    "Each category have the challenges that you can choose to compete in. What challenge do you want to tackle in Hack for Sweden 2019? Read more about each area <a href='#'>here</a>.",
+    "Varje kategori har de utmaningar som du kan välja att tävla i. Vilken utmaning vill du försöka lösa i Hack för Sverige 2019? Läs mer här <a href='#'>här</a>."
+  ],
+  "menu": ["Menu", "Meny"],
+  "hackaton.dates": [
+    "April 4th - 6th, Stockholmsmässan",
+    "4-6 April, Stockholmsmässan"
+  ]
+}
