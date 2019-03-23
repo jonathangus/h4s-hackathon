@@ -1,16 +1,12 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import SiteBoxes from '../components/SiteBoxes'
+import Header from '../components/Header'
 
 const Page = () => (
   <div>
-    <h1>HEj hackathon</h1>
+    <Header />
+    <SiteBoxes />
   </div>
 )
 export default Page
-
-// export const query = graphql`
-//   query($locale: String) {
-
-//     }
-//   }
-// `
