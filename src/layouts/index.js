@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import MobileFooter from '../components/MobileFooter'
 import GlobalStyle from '../GlobalStyle'
 import media from '../media'
+import Header from '../components/Header'
 
 const Main = styled.main`
   ${media.phone`
@@ -17,6 +18,7 @@ const TemplateWrapper = ({ children, location: { pathname } }) => {
 
   return (
     <div>
+      <Header full={path === '/'} />
       <Main>{children}</Main>
       <Helmet>
         <link

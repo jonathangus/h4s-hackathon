@@ -6,17 +6,17 @@ import { gutter } from '../vars'
 
 const Wrapper = styled.div`
   text-align: center;
-  margin: ${gutter * 2}px auto;
+  margin: ${p => (p.full ? gutter * 2 : gutter)}px auto;
 
   img {
-    max-width: 100px;
+    max-width: ${p => (p.full ? 100 : 50)}px;
   }
 `
 
-const Header = props => {
+const Header = ({ full }) => {
   return (
     <Grid>
-      <Wrapper>
+      <Wrapper full={full || undefined}>
         <img src={logo} />
       </Wrapper>
     </Grid>
