@@ -128,8 +128,6 @@ const Inner = styled.div`
   // padding: ${gutter * 4}px 0 ${gutter * 6}px 0;
 `
 
-var oldDate = window.Date
-
 const days = ['Thursday', 'Friday', 'Saturday']
 const dateDayOne = '2019-04-04'
 const dateDayTwo = '2019-04-05'
