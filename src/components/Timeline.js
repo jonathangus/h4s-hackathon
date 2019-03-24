@@ -152,7 +152,7 @@ const getPercentage = _startOfDay => {
   const currentDiff = endOfDay.diff(now, 'second')
   const percentage = (totalDiff - currentDiff) / totalDiff
 
-  console.log()
+  console.log(totalDiff - currentDiff, { totalDiff, currentDiff, percentage })
   return percentage
 }
 
