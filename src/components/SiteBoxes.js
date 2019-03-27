@@ -38,6 +38,7 @@ const Image = styled.div`
   width: 100%;
   background-size: cover;
   background-position: center;
+  transition: transform 0.3s ease-in-out;
 `
 
 const Title = styled.h2``
@@ -50,6 +51,12 @@ const Part = styled(Link)`
   position: relative;
   text-decoration: none;
   overflow: hidden;
+
+  &:hover {
+    ${Image} {
+      transform: scale(1.1);
+    }
+  }
 
   &:before {
     z-index: 0;
