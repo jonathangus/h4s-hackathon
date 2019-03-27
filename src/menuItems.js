@@ -3,6 +3,7 @@ import partnerTrack from '../images/partnerTrack.jpg'
 import expo from '../images/expo.jpg'
 import challenges from '../images/challenges.jpg'
 import faq from '../images/faq.jpg'
+import jury from '../images/jury.jpg'
 
 export default [
   {
@@ -27,7 +28,12 @@ export default [
   },
   {
     title: 'Partner Track',
-    url: 'partner-track',
+    url: '/partner-track',
     image: partnerTrack,
+  },
+  {
+    title: 'Jury',
+    url: '/jury',
+    image: jury,
   },
 ]

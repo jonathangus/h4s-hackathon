@@ -36,7 +36,8 @@
     "react-dom": "16.8.5",
     "react-helmet": "^5.2.0",
     "react-hot-loader": "^4.8.0",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "styled-css-grid": "^1.2.1"
   },
   "keywords": [
     "gatsby"
