@@ -32,6 +32,10 @@ const Part = styled(Link)`
   text-decoration: none;
   overflow: hidden;
 
+  @media (min-width: 800px) {
+    height: 270px;
+  }
+
   &:hover {
     ${Image} {
       transform: scale(1.1);
@@ -88,7 +92,7 @@ const sizes = [[4, 4], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2]]
 const SiteBoxes = props => {
   return (
     <SiteGrid>
-      <Grid columns="repeat(auto-fit,minmax(150px,1fr))" gap={`${gutter}px`}>
+      <Grid columns={4} gap={`${gutter}px`}>
         {meniItems.map((item, i) => (
           <StyledCell width={sizes[i][0]} height={sizes[i][1]} key={i}>
             <Part key={i} to={item.url}>
