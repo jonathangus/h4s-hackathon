@@ -16,7 +16,10 @@ export default Page
 
 export const query = graphql`
   {
-    allContentfulEvent(sort: { fields: [startTime], order: ASC }) {
+    allContentfulEvent(
+      filter: { node_locale: { eq: "en-US" } }
+      sort: { fields: [startTime], order: ASC }
+    ) {
       edges {
         node {
           id

@@ -45,19 +45,19 @@ const items = [
     title: 'Schedule',
   },
   {
-    url: '/schedule',
+    url: '/faq',
     icon: faCalendar,
-    title: 'Schedule',
+    title: 'FAQ',
   },
   {
-    url: '/schedule',
+    url: '/challenges',
     icon: faCalendar,
-    title: 'Schedule',
+    title: 'Challenges',
   },
   {
-    url: '/schedule',
+    url: '/partner-track',
     icon: faCalendar,
-    title: 'Schedule',
+    title: 'Partner Track',
   },
 ]
 

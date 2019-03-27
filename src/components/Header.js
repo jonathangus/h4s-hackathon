@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Grid from './Grid'
 import logo from '../../logo.png'
 import { gutter, baseTransition } from '../vars'
+import { Link } from 'gatsby'
 
 const Wrapper = styled.div`
   text-align: center;
@@ -20,7 +21,9 @@ const Header = ({ full }) => {
   return (
     <Grid>
       <Wrapper full={full || undefined}>
-        <img src={logo} />
+        <Link to="/">
+          <img src={logo} />
+        </Link>
       </Wrapper>
     </Grid>
   )

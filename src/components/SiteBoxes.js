@@ -30,6 +30,16 @@ const Wrapper = styled.div`
   }
 `
 
+const Image = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+`
+
 const Title = styled.h2``
 const Part = styled(Link)`
   min-height: 100%;
@@ -50,9 +60,6 @@ const Part = styled(Link)`
     top: 0;
     right: 0;
     bottom: 0;
-    background-image: url(${image});
-    background-size: cover;
-    background-position: center;
     transition: transform ${baseTransition};
   }
 
@@ -148,6 +155,7 @@ const SiteBoxes = props => {
       <Wrapper>
         {meniItems.map((item, i) => (
           <Part key={i} to={item.url}>
+            <Image style={{ backgroundImage: `url(${item.image})` }} />
             <Content>
               <Title>{item.title}</Title>
             </Content>

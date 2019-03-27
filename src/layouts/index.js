@@ -5,6 +5,7 @@ import MobileFooter from '../components/MobileFooter'
 import GlobalStyle from '../GlobalStyle'
 import media from '../media'
 import Header from '../components/Header'
+import { LocaleContextProvider } from '../localeContext'
 
 const Main = styled.main`
   ${media.phone`
@@ -17,7 +18,7 @@ const TemplateWrapper = ({ children, location: { pathname } }) => {
   const path = (pathname.endsWith('/') ? pathname.substr(1) : pathname) || '/'
 
   return (
-    <div>
+    <LocaleContextProvider locale={'en-US'}>
       <Header full={path === '/'} />
       <Main>{children}</Main>
       <Helmet>
@@ -28,7 +29,7 @@ const TemplateWrapper = ({ children, location: { pathname } }) => {
       </Helmet>
       <GlobalStyle />
       <MobileFooter path={path} />
-    </div>
+    </LocaleContextProvider>
   )
 }
 export default TemplateWrapper

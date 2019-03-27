@@ -103,41 +103,42 @@
   "hackatonSection.jury": ["Jury", "Jury"],
   "hackatonSection.schedule": ["Schedule", "Schema"],
   "hackatonSection.globalGoals": ["17 global goals", "Globala målen"],
-  "hackatonSection.faqHacker": ["FAQ for Hackers", "Vanliga frågor"],
+  "hackatonSection.faqHacker": ["FAQ for Hackers", "Vanliga frågor (hackare)"],
   "hackatonSection.faqPartner": [
     "FAQ for Partners",
     "Vanliga frågor (partners)"
   ],
+  "hackatonSection.partnerTrack": ["Partner Track", "Partner Track"],
   "innovationWeekHeadline1": ["One week,", "En vecka,"],
-  "innovationWeekHeadline2": ["three events,", "tre evenemang"],
+  "innovationWeekHeadline2": ["three events,", "tre events"],
   "innovationWeekHeadline3": [
     "10 million possibilities.",
     "10 miljoner möjligheter."
   ],
   "innovationWeekIntro": [
     "In April 2019, we are for the very first time arranging Sweden Innovation Week! <a href='https://www.hackforsweden.se'>Hack for Sweden</a> ,  <a href='http://www.digigov.se' target='_blank'>DigiGov</a> and <a href='http://www.swedendemoday.com' target='_blank'>Sweden Demo Day</a> are teaming up to create an entire week of innovation. Come and join us in kick-starting the Swedish ecosystem for innovation!",
-    "I April 2019 anordnar vi för första gången Sweden Innovation Week! <a href='https://www.hackforsweden.se'> Hack for Sweden </a>, <a href='http://www.digigov.se' target='_blank'> DigiGov </a> och <a href='http://www.swedendemoday.com' target='_blank'>Sweden Demo Day </a> samarbetar för att skapa en hel vecka med innovation. Kom och var med oss och starta det svenska ekosystemet för innovation!"
+    "I april 2019 kommer vi för första gången arrangera Sweden Innovation Week! <a href='https://www.hackforsweden.se'> Hack for Sweden </a>, <a href='http://www.digigov.se' target='_blank'> DigiGov </a> och <a href='http://www.swedendemoday.com' target='_blank'>Sweden Demo Day </a> har gått ihop för att skapa en hel vecka fylld av innovation. Följ med oss och kickstarta det svenska ekosystemet för innovation!"
   ],
-  "innovationWeek.digi.title": ["DigiGov April 2nd-3rd", "DigiGov 2-3 April"],
+  "innovationWeek.digi.title": ["DigiGov April 2nd-3rd", "DigiGov 2-3 april"],
   "innovationWeek.digi.body": [
     "<p>The lop level forum for a smarter Sweden. Over the course of two days, top decision-makers in the public sector, business and academia will conduct a strategic discussion on where the Swedish public sector is heading and what needs to be done. </p>Going to Hack for Sweden and/or Sweden Demo Day? Get more out of Sweden Innovation Week and join in DigiGov for the great discount price of only 5500SEK with the discount code <b>SIW19</b>! This special offer is valid from March 12th through March 26th</p>",
-    "<p>Loppnivåforumet för ett smartare Sverige. Under två dagar kommer de främsta beslutsfattarna inom den offentliga sektorn, näringslivet och akademin att göra en strategisk diskussion om var den svenska offentliga sektorn är på väg och vad som behöver vara gjort.</p> Ska du gå på Hack for Sweden eller Sweden Demo Day? Få mer ut av Sweden Innovation Week och gå med i DigiGov för det fantastiska rabattpriset på endast 5500 kr med rabattkoden <b>SIW19</b>! Detta specialerbjudanden gäller mellan 12 mars och 26 mars </p>"
+    "<p>Toppledarforum för ett smartare Sverige. Under två dagar kommer toppledare inom den offentliga sektorn, näringslivet och akademin genomföra en strategisk diskussion om var Sveriges offentliga sektor är på väg och vad som behöver göras.</p> Ska du delta på Hack for Sweden eller Sweden Demo Day? Få ut mer utav Sweden Innovation Week och delta på DigiGov till det förmånliga priset av enbart 5500SEK med rabattkoden SIW19! Erbjudandet gäller fr.o.m. 12 mars t.o.m. 26 mars.</p>"
   ],
   "innovationWeek.demoday.title": [
     "Sweden Demo Day April 4th",
-    "Sweden Demo Day 4 April"
+    "Sweden Demo Day 4 april"
   ],
   "innovationWeek.demoday.body": [
     "No speakers – no distractions. If you want traditional conference content, listen to TED. Clear your schedule for Sweden Demo Day! Come meet more than 600 exhibiting startup entrepreneurs and get to know them and their ideas better. The playing field is leveled as they all present themselves with nothing but our signature brown paper pitch. Sweden Demo Day is the largest and most spectacular un-conference for startups, investors and corporates in the digital realms. Since the very beginning, 2010, it is both driven and owned by the community. If you are participating in Hack for Sweden, as a hacker or a partner, you can pick up a free ticket for Sweden Demo Day",
-    "Inga talare - inga distraheringar. Om du vill ha traditionella konferensinnehåll, lyssna på TED. Töm ditt schema för Sweden Demo Day! Kom och träffa mer än 600 utställande entreprenörer och lära känna dem och deras idéer bättre. Sweden Demo Day är den största och mest spektakulära unkonferensen för nybörjare, investerare och företag i de digitala världarna. Sedan starten 2010 är det båda drivna och ägda av Om du deltar i Hack for Sweden, som hackare eller partner, kan du hämta en gratis biljett till Sweden Demo Day"
+    "Inga talare – ingen distraktion. Om du vill ha traditionella konferensinnehåll, lyssna på TED. Töm ditt schema för Sweden Demo Day! Kom och träffa mer än 600 startupentreprenörer och lär känna dem och deras idéer. Förutsättningarna är lika för alla eftersom alla presterar sig själva med inget annat än vår signatur ”Brown paper pitch”. Sweden Demo Day är den största och mest spektakulära knytkonferensen för nybörjare, investerare och företag inom de digitala världarna. Sedan starten 2010 är eventet drivet och ägt av deltagarna. Om du kommer delta under Hack for Sweden som hackare eller partner har du möjligheten att hämta en gratisbiljett till Sweden Demo Day."
   ],
   "innovationWeek.h4s.title": [
     "Hack for Sweden April 4th-6th",
-    "Hack for Sweden 4-6 April"
+    "Hack for Sweden 4 - 6 april"
   ],
   "innovationWeek.h4s.body": [
     "Hack for Sweden – Sweden’s new platform for citizendriven innovation, where public and private sector come together so create the society we dream of tomorrow. A hackathon where we don’t let the great ideas stay on post-its, we make the smart solutions for a sustainable society come to life! Come hack with us and be part of creating the Sweden we dream of tomorrow – Sweden 4.0. If you are going to Sweden Demo Day, you get free admission to Hack for Sweden Exhibition Area and Partner Track",
-    "Hack for Sweden - Sveriges nya plattform för innovativ innovation, där den offentliga och privata sektorn samlas, så skapa det samhälle vi drömmer om imorgon. En hackathon där vi inte låter de stora idéerna stanna kvar efter det, vi gör de smarta lösningarna för ett hållbart samhälle till liv! Kom hacka med oss och vara med och skapa det Sverige vi drömmer om - Sverige 4.0. Om du kommer till Sweden Demo Day får du fri entré till Hack for Swedens utställningsområde."
+    "Hack for Sweden – Sveriges nya plattform för medborgardriven innovation där den offentliga och privata sektorn samarbetar för att skapa morgondagens drömsamhälle. Ett Hackaton där vi inte låter bra idéer stå kvar på post-its. Vi får smarta lösningar för ett hållbart samhälle att komma till liv! Kom och hacka med oss och var med och forma ett Sverige vi drömmer om – Sverige 4.0. Om du kommer delta på Sweden Demo Day har du fri entré till Hack for Swedens utställningsområde."
   ],
   "common.readMore": ["Read more", "Läs mer här"],
   "schedule.title": ["Schedule", "Schema"],
@@ -157,6 +158,7 @@
   "link.signup": ["Sign up", "Ansök"],
   "/": ["Welcome", "Welcome"],
   "/open-data": ["Open data", "Öppna data"],
+  "/partner-track": ["Partner Track", "Partner Track"],
   "/the-mission": ["The mission", "Uppdraget"],
   "/our-community": ["Our Community", "Vår Community"],
   "/team": ["Team", "Team"],
@@ -165,14 +167,16 @@
     "Sweden innovation week",
     "Sweden innovation week"
   ],
+  "/hackaton#schedule": ["Schedule", "Program"],
   "/dream-for-sweden": ["Dream for Sweden", "Dream for Sweden"],
   "/hackaton": ["Hack for Sweden 2019", "Hack for Sweden 2019"],
-  "/faq": ["FAQ", "Vanliga frågor"],
+  "/faq": ["FAQ", "Vanliga frågor - hackare"],
   "/faq-partner": ["FAQ - partners", "Vanliga frågor - partners"],
   "/press": ["Press", "Press"],
   "/signup": ["Signup", "Ansök"],
   "/partner": ["Partner", "Partner"],
   "/challenges": ["Challenges", "Utmaningar"],
+  "faq.title": ["FAQ - hackers", "Vanliga frågor - hackare"],
   "footer.contact": ["Contact", "Kontakta oss"],
   "projectManagement": ["Project management", "Projektledning"],
   "steeringCommittee": ["Steering Committee", "Styrgrupp"],
@@ -201,7 +205,7 @@
   "dream.link": ["Visit site", "Besök sida"],
   "schema.day1.title": ["Thursday April 4th", "Torsdag 4 april"],
   "schema.day1.1": [
-    "Doors open to all hackers!",
+    "Doors open to all hackers",
     "Dörrarna öppnas för alla hackare!"
   ],
   "schema.day1.2": ["Opening Ceremony", "Öppningsceremoni"],
@@ -245,5 +249,11 @@
   "hackaton.dates": [
     "April 4th - 6th, Stockholmsmässan",
     "4-6 April, Stockholmsmässan"
-  ]
+  ],
+  "partnerTrack.title": ["Partner Track", "Partner Track"],
+  "partnerTrack.workshop": ["Workshops", "Workshops"],
+  "partnerTrack.lectures": ["Lectures", "Föreläsningar"],
+  "partnerTrack.audience": ["Audience", "Åhörare"],
+  "partnerTrack.speaker": ["Performed by", "Föreläsare"],
+  "partnerTrack.company": ["Company/Association", "Företag/Förening"]
 }

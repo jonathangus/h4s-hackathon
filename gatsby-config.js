@@ -12,6 +12,12 @@ contentfulConfig = {
     process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken,
 }
 
+const contentfulConfigSecond = {
+  spaceId: '25z746q9cwtc',
+  accessToken:
+    '32b139b4ab821fea8b94650f32aafebe9f88a815e9482c71bf5c0a8681e18ec3',
+}
+
 const { spaceId, accessToken } = contentfulConfig
 
 if (!spaceId || !accessToken) {
@@ -38,6 +44,10 @@ module.exports = {
         path: `${__dirname}/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: contentfulConfigSecond,
+    },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
@@ -46,7 +56,7 @@ module.exports = {
     // },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify',
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-layout`,
       options: {
