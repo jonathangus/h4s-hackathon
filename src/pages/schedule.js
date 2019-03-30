@@ -25,6 +25,11 @@ export const query = graphql`
           id
           title
           startTime
+          text {
+            childMarkdownRemark {
+              html
+            }
+          }
         }
       }
     }

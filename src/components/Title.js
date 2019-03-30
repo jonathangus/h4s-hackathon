@@ -15,7 +15,9 @@ const TitleElem = styled.h1`
 `
 
 const Arrow = styled.div`
-  margin-right: 5px;
+  margin-right: 8px;
+  /* padding-top: 8px; */
+
   ${media.phone`
     transform:scale(0.7);
     transform-origin:right;

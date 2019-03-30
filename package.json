@@ -10,6 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@hot-loader/react-dom": "^16.8.4",
     "babel-plugin-styled-components": "^1.10.0",
+    "contentful": "^7.5.0",
     "dayjs": "^1.8.11",
     "es6-promise": "^4.2.6",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -36,6 +37,7 @@
     "react-dom": "16.8.5",
     "react-helmet": "^5.2.0",
     "react-hot-loader": "^4.8.0",
+    "react-pose": "^4.0.8",
     "styled-components": "^4.2.0",
     "styled-css-grid": "^1.2.1"
   },

@@ -6,6 +6,7 @@ import GlobalStyle from '../GlobalStyle'
 import media from '../media'
 import Header from '../components/Header'
 import { LocaleContextProvider } from '../localeContext'
+import Message from '../components/Message'
 
 const Main = styled.main`
   ${media.phone`
@@ -20,6 +21,7 @@ const TemplateWrapper = ({ children, location: { pathname } }) => {
   return (
     <LocaleContextProvider locale={'en-US'}>
       <Header full={path === '/'} />
+      <Message />
       <Main>{children}</Main>
       <Helmet>
         <link

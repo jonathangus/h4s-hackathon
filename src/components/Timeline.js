@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import groupBy from 'lodash/groupBy'
 import dayjs from 'dayjs'
 import Cookies from 'js-cookie'
-import { gutter, titleFont, green, magenta } from '../vars'
+import { gutter, titleFont, green } from '../vars'
 import Grid from './Grid'
+import get from 'lodash/get'
 
-const Container = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
-  margin-bottom: ${gutter * 2}px;
-`
+const Container = styled.div``
 
 const Section = styled.div`
-  margin-bottom: ${gutter * 2}px;
+  margin-bottom: ${gutter * 4}px;
+  &:last-child {
+    margin: 0;
+  }
 `
 const Date = styled.div`
   font-weight: bold;
@@ -46,24 +46,19 @@ const Item = styled.div`
     ${Content} {
       padding: 0;
     }
+    ${Date} {
+      &:after {
+        display: none;
+      }
+    }
   }
 `
-const Title = styled.h4`
+const Title = styled.h3`
   line-height: 1.1;
-  position: relative;
+`
 
-  &:before {
-    content: '';
-    height: 18px;
-    width: 18px;
-    background: ${magenta};
-    position: absolute;
-    left: -${gutter * 3 - 2}px;
-    top: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 5;
-  }
+const DaysWrap = styled.div`
+  background: #000;
 `
 const Days = styled.div`
   overflow: hidden;
@@ -72,7 +67,6 @@ const Days = styled.div`
   justify-content: space-between;
   margin-bottom: ${gutter * 2}px;
   position: relative;
-  background: #000;
 `
 
 const Day = styled.div`
@@ -96,37 +90,6 @@ const Bar = styled.div`
   bottom: 0;
   transition: left 0.25s ease-in-out;
 `
-const List = styled.div`
-  margin-left: ${gutter * 3}px;
-`
-const Line = styled.div`
-  width: 3px;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #222;
-
-  &:after {
-    transition: all 0.2s ease;
-    content: '';
-    height: 100%;
-    width: 100%;
-    display: block;
-    position: absolute;
-    background: red;
-    z-index: 2;
-    transform: scaleY(${p => p.percentage});
-    transform-origin: top;
-    background: linear-gradient(${magenta}, #5e0b41);
-  }
-`
-const Inner = styled.div`
-  display: flex;
-  position: relative;
-  margin-left: 20px;
-  // padding: ${gutter * 4}px 0 ${gutter * 6}px 0;
-`
 
 const days = ['Thursday', 'Friday', 'Saturday']
 const dateDayOne = '2019-04-04'
@@ -137,21 +100,6 @@ const getDefaultDay = () => {
   if (Cookies.get('selectedDay')) {
     return parseInt(Cookies.get('selectedDay'), 10)
   }
-
-  return 1
-}
-
-const getPercentage = _startOfDay => {
-  const startOfDay = dayjs('2019-03-23T10:00:00+02:00')
-  const endOfDay = dayjs().endOf('day')
-  const now = dayjs()
-
-  const totalDiff = endOfDay.diff(startOfDay, 'second')
-  const currentDiff = endOfDay.diff(now, 'second')
-  const percentage = (totalDiff - currentDiff) / totalDiff
-
-  console.log(totalDiff - currentDiff, { totalDiff, currentDiff, percentage })
-  return percentage
 }
 
 const Timeline = ({ events }) => {
@@ -159,30 +107,16 @@ const Timeline = ({ events }) => {
   const groups = groupBy(events, event => dayjs(event.startTime).day())
   const items = groups[selectedDay + 3] || []
 
-  const [percentage, setPercentage] = useState(getPercentage())
-
-  const setLoop = () => {
-    const id = setInterval(() => {
-      setPercentage(getPercentage())
-    }, 5000)
-
-    return id
-  }
-
-  useEffect(() => {
-    const id = setLoop()
-
-    return () => {
-      clearInterval(id)
-    }
-  }, [])
-
   const getEvent = event => (
     <Item key={event.id}>
+      <Date>{dayjs(event.startTime).format('HH:mm')}</Date>
       <Content>
-        <Date>{dayjs(event.startTime).format('HH:mm')}</Date>
         <Title>{event.title}</Title>
-        <ExtraText>Welcome hackers!</ExtraText>
+        <ExtraText
+          dangerouslySetInnerHTML={{
+            __html: get(event, 'event.childMarkdownRemark.html'),
+          }}
+        />
       </Content>
     </Item>
   )
@@ -194,26 +128,25 @@ const Timeline = ({ events }) => {
 
   return (
     <Container>
-      <Days>
-        {days.map((day, index) => (
-          <Day
-            key={index}
-            active={selectedDay === index + 1}
-            onClick={() => _setSelectedDay(index + 1)}
-          >
-            <span>{day}</span>
-          </Day>
-        ))}
-
-        <Bar selectedDay={selectedDay} />
-      </Days>
-      <Section>
+      <DaysWrap>
         <Grid>
-          <Inner>
-            <Line percentage={percentage} />
-            <List>{items.map(getEvent)}</List>
-          </Inner>
+          <Days>
+            {days.map((day, index) => (
+              <Day
+                key={index}
+                active={selectedDay === index + 1}
+                onClick={() => _setSelectedDay(index + 1)}
+              >
+                <span>{day}</span>
+              </Day>
+            ))}
+
+            <Bar selectedDay={selectedDay} />
+          </Days>
         </Grid>
+      </DaysWrap>
+      <Section>
+        <Grid>{items.map(getEvent)}</Grid>
       </Section>
     </Container>
   )

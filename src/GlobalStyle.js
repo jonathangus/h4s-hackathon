@@ -7,6 +7,7 @@ import {
   titleColor,
   textFont,
   gutter,
+  primary,
 } from './vars'
 
 const GlobalStyle = createGlobalStyle`
@@ -16,10 +17,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         outline: none;
     }
-    body {
-        background: ${bgColor};
-    }
-
+    
     body {
         background-color: ${bgColor};
         font-family: ${textFont}, sans-serif;
@@ -37,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
       }
       a{
         line-height:1;
+        color: ${primary}
       }
       
 

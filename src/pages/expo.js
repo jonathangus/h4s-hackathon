@@ -3,47 +3,40 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import styled from 'styled-components'
 import Seo from '../components/Seo'
-import FAQItem from '../components/FAQItem'
 import Grid from '../components/Grid'
+import { gutter, textColor } from '../vars'
+import Title from '../components/Title'
+import image from '../../images/map.jpg'
 
 const Page = ({ data }) => {
   const seo = get(data, 'allContentfulSeo.edges[0].node')
-  const faq = get(data, 'allContentfulFaq.edges', []).map(n => n.node)
 
   return (
-    <Grid>
+    <React.Fragment>
       <Seo data={seo} />
-      {faq.map(item => (
-        <FAQItem faq={item} key={item.id} />
-      ))}
-    </Grid>
+      <Grid>
+        <img src={image} />
+      </Grid>
+    </React.Fragment>
   )
 }
 
 export const query = graphql`
   {
-    allContentfulFaq(
-      filter: {
-        node_locale: { eq: "en-US" }
-        isEvent: { eq: true }
-        isPartner: { eq: false }
-      }
-      sort: { fields: [weight], order: ASC }
+    intro: contentfulText(
+      node_locale: { eq: "en-US" }
+      identifier: { eq: "jury-groups-hack-for-sweden-2019" }
     ) {
-      edges {
-        node {
-          id
-          title
-          body {
-            childMarkdownRemark {
-              html
-            }
-          }
+      headline
+      body {
+        childMarkdownRemark {
+          html
         }
       }
     }
+
     allContentfulSeo(
-      filter: { node_locale: { eq: "en-US" }, slug: { eq: "hackathon-jury" } }
+      filter: { node_locale: { eq: "en-US" }, slug: { eq: "hackathon-expo" } }
     ) {
       edges {
         node {
