@@ -8,7 +8,7 @@ import Grid from '../components/Grid'
 
 const Page = ({ data }) => {
   const seo = get(data, 'allContentfulSeo.edges[0].node')
-  const faq = get(data, 'allContentfulFaqHackathon.edges', []).map(n => n.node)
+  const faq = get(data, 'allContentfulFaq.edges', []).map(n => n.node)
 
   return (
     <Grid>
@@ -21,12 +21,12 @@ const Page = ({ data }) => {
 
 export const query = graphql`
   {
-    allContentfulFaqHackathon(filter: { node_locale: { eq: "en-US" } }) {
+    allContentfulFaq(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           id
           title
-          text {
+          body {
             childMarkdownRemark {
               html
             }
@@ -35,7 +35,7 @@ export const query = graphql`
       }
     }
     allContentfulSeo(
-      filter: { node_locale: { eq: "en-US" }, slug: { eq: "challenges" } }
+      filter: { node_locale: { eq: "en-US" }, slug: { eq: "hackathon-jury" } }
     ) {
       edges {
         node {

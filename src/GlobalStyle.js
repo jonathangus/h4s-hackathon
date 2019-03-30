@@ -6,6 +6,7 @@ import {
   titleFont,
   titleColor,
   textFont,
+  gutter,
 } from './vars'
 
 const GlobalStyle = createGlobalStyle`
@@ -61,7 +62,18 @@ const GlobalStyle = createGlobalStyle`
       h4 {
         font-size: 18px;
       }
+
+      p {
+        margin-bottom: ${gutter}px;
+
+        &:last-child {
+          margin-bottom:0;
+        }
+      }
       
+      ul, ol {
+        margin-left: 20px;
+      }
 
 
 `

@@ -38,7 +38,7 @@ const Image = styled.div`
 
 const Part = styled(Link)`
   min-height: 100%;
-  height: 160px;
+  /* height: 160px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,7 +47,7 @@ const Part = styled(Link)`
   overflow: hidden;
 
   @media (min-width: 800px) {
-    height: 270px;
+    /* height: 270px; */
   }
 
   &:hover {
@@ -70,32 +70,6 @@ const Part = styled(Link)`
   }
 `
 
-const StyledCell = styled(Cell)`
-  &:nth-child(4n) {
-    ${Part}:after {
-      background: ${yellow};
-    }
-  }
-
-  &:nth-child(4n + 1) {
-    ${Part}:after {
-      background: ${green};
-    }
-  }
-
-  &:nth-child(4n + 2) {
-    ${Part}:after {
-      background: ${magenta};
-    }
-  }
-
-  &:nth-child(4n + 3) {
-    ${Part}:after {
-      background: ${blue};
-    }
-  }
-`
-
 const Content = styled.div`
   position: relative;
   z-index: 2;
@@ -104,15 +78,15 @@ const Content = styled.div`
 `
 
 const sizes = [
-  [4, 4],
-  [2, 2],
-  [2, 2],
-  [4, 2],
-  [2, 2],
-  [2, 2],
-  [2, 2],
-  [2, 2],
-  [2, 2],
+  [4, 8],
+  [2, 6],
+  [2, 6],
+  [4, 6],
+  [2, 4],
+  [2, 4],
+  [4, 8],
+  [2, 4],
+  [2, 4],
 ]
 
 let count = 0
@@ -138,14 +112,14 @@ const SiteBoxes = props => {
     <SiteGrid>
       <Grid columns={4} gap={`${gutter}px`}>
         {finalItems.map((item, i) => (
-          <StyledCell width={item.width} height={item.height} key={i}>
+          <Cell width={item.width} height={item.height} key={i}>
             <Part color={item.color.color} key={i} to={item.url}>
               <Image style={{ backgroundImage: `url(${item.image})` }} />
               <Content>
                 <Title color={item.color} title={item.title} />
               </Content>
             </Part>
-          </StyledCell>
+          </Cell>
         ))}
       </Grid>
     </SiteGrid>

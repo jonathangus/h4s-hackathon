@@ -6,7 +6,7 @@ export const medium = 500
 export const textColor = '#dcdcdc'
 export const titleColor = '#FFF'
 
-export const textFont = 'Niramit'
+export const textFont = "'IBM Plex Sans', sans-serif;"
 export const titleFont = "'IBM Plex Sans', sans-serif;"
 
 export const green = '#00B977'

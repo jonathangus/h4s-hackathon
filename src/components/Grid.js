@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { gutter } from '../vars'
 
 const Grid = styled.div`
-  padding: 0 ${gutter}px;
+  padding: 0 ${gutter * 2}px;
   max-width: 1140px;
   margin: 0 auto;
 `
