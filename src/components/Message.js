@@ -77,7 +77,7 @@ const Wrapper = styled.div`
 `
 
 const Message = props => {
-  const [data, setData] = useState(props.notice)
+  const [data, setData] = useState(props.notices)
 
   const fetchData = () => {
     client
@@ -85,10 +85,11 @@ const Message = props => {
         content_type: 'notice',
       })
       .then(entry => {
-        const item = get(entry, 'items[0].fields')
-        if (item) {
-          setData(item)
+        const items = get(entry, 'items', []).map(n => n.fields)
+        if (items) {
+          setData(items)
         }
+        console.log({ items, entry })
       })
       .catch(err => console.log(err))
   }
@@ -108,21 +109,29 @@ const Message = props => {
   }
 
   return (
-    <Wrapper>
-      <Circle>
-        <img src={logo} />
-      </Circle>
-      <Box>
-        <Inner>{data.title}</Inner>
-      </Box>
-    </Wrapper>
+    <React.Fragment>
+      {data.map((d, k) => (
+        <Wrapper key={k}>
+          <Circle>
+            <img src={logo} />
+          </Circle>
+          <Box>
+            <Inner>{d.title}</Inner>
+          </Box>
+        </Wrapper>
+      ))}
+    </React.Fragment>
   )
 }
 
 export default () => (
   <StaticQuery
     render={data => {
-      return <Message notice={get(data, 'allContentfulNotice.edges[0].node')} />
+      return (
+        <Message
+          notices={get(data, 'allContentfulNotice.edges', []).map(n => n.node)}
+        />
+      )
     }}
     query={graphql`
       {

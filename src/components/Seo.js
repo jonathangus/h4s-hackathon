@@ -1,13 +1,14 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
+import challengeImage from '../../images/challenges.jpg'
 
 const Seo = props => {
   const { data, index } = props
   const extra = index ? '' : ' - Hack for Sweden'
   const title = get(data, 'title') + extra
-  const description = get(data, 'description.description')
-  const imageUrl = get(data, 'image.file.url') || ''
+  const description = get(data, 'description.description', '')
+  const imageUrl = get(data, 'image.file.url', challengeImage)
   const image = `https:${imageUrl}`
 
   return (
