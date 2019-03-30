@@ -7,11 +7,13 @@ import media from '../media'
 import Header from '../components/Header'
 import { LocaleContextProvider } from '../localeContext'
 import Message from '../components/Message'
+import { gutter } from '../vars'
 
 const Main = styled.main`
-  ${media.phone`
-  margin-bottom: 54px;
+  margin-bottom: ${gutter * 6}px;
 
+  ${media.phone`
+    margin-bottom: ${54 + gutter * 2}px;
   `}
 `
 

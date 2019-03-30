@@ -10,10 +10,7 @@ import get from 'lodash/get'
 const Container = styled.div``
 
 const Section = styled.div`
-  margin-bottom: ${gutter * 4}px;
-  &:last-child {
-    margin: 0;
-  }
+  margin: ${gutter * 4}px 0;
 `
 const Date = styled.div`
   font-weight: bold;

@@ -37,7 +37,7 @@ const PartnerTrack = ({ events }) => {
   const workshops = events.filter(e => e.type === 'Workshop')
   const lectures = events.filter(e => e.type === 'Lecture')
   const t = useLocale()
-  console.log({ t })
+
   const getItem = event => {
     const date = [event.startTime, event.endTime]
       .filter(Boolean)

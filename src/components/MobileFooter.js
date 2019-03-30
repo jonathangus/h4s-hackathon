@@ -20,7 +20,9 @@ const Container = styled.div`
     display:flex;
  `}
 `
-const Label = styled.div``
+const Label = styled.div`
+  margin-top: 3px;
+`
 const Item = styled(Link)`
   text-decoration: none;
   align-items: center;
@@ -31,6 +33,10 @@ const Item = styled(Link)`
   flex-grow: 1;
   display: flex;
   color: ${p => (p.active ? primary : white)};
+
+  svg {
+    max-width: 20px;
+  }
 `
 
 const items = [
