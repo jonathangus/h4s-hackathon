@@ -23,7 +23,7 @@ const TemplateWrapper = ({ children, location: { pathname } }) => {
       <Main>{children}</Main>
       <Helmet>
         <link
-          href="https://fonts.googleapis.com/css?family=Niramit|IBM+Plex+Sans:400,600,700"
+          href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600"
           rel="stylesheet"
         />
       </Helmet>

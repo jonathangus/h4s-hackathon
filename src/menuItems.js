@@ -4,6 +4,7 @@ import expo from '../images/expo.jpg'
 import challenges from '../images/challenges.jpg'
 import faq from '../images/faq.jpg'
 import jury from '../images/jury.jpg'
+import prizes from '../images/prizes.jpg'
 
 export default [
   {
@@ -35,5 +36,10 @@ export default [
     title: 'Jury',
     url: '/jury',
     image: jury,
+  },
+  {
+    title: 'Prizes',
+    url: '/prizes',
+    image: prizes,
   },
 ]

@@ -1,5 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
-import { bgColor, textColor, titleFont, titleColor, textFont } from './vars'
+import {
+  bgColor,
+  textColor,
+  semi,
+  titleFont,
+  titleColor,
+  textFont,
+} from './vars'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -31,8 +38,13 @@ const GlobalStyle = createGlobalStyle`
         line-height:1;
       }
       
+
+      h1 {
+        font-size: 48px;
+      }
+      
       h1,h2,h3,h4 {
-        font-weight: bold;
+        font-weight: ${semi};
         font-family:  ${titleFont};
         color: ${titleColor};
       }

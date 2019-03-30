@@ -2,13 +2,28 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import SiteGrid from './Grid'
-import meniItems from '../menuItems'
-import { gutter, baseTransition, blue, green, magenta, yellow } from '../vars'
+import menuItems from '../menuItems'
+import { gutter, baseTransition } from '../vars'
+import colors from '../colors'
+import Title from './Title'
 import { Grid, Cell } from 'styled-css-grid'
 
-const Wrapper = styled.div`
-  margin: 0 auto;
-`
+const { blue, green, magenta, yellow, white } = colors
+const getAccentColor = main => {
+  if (main === blue) {
+    return yellow
+  } else if (main === yellow) {
+    return magenta
+  } else if (main === green) {
+    return yellow
+  } else if (main === white) {
+    return magenta
+  }
+
+  return white
+}
+
+const colorsList = [green, blue, magenta, yellow, white]
 
 const Image = styled.div`
   position: absolute;
@@ -21,7 +36,6 @@ const Image = styled.div`
   transition: transform 0.3s ease-in-out;
 `
 
-const Title = styled.h2``
 const Part = styled(Link)`
   min-height: 100%;
   height: 160px;
@@ -51,9 +65,11 @@ const Part = styled(Link)`
     top: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.5;
+    opacity: 0.9;
+    background: ${p => p.color};
   }
 `
+
 const StyledCell = styled(Cell)`
   &:nth-child(4n) {
     ${Part}:after {
@@ -87,18 +103,46 @@ const Content = styled.div`
   padding: 5px;
 `
 
-const sizes = [[4, 4], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2]]
+const sizes = [
+  [4, 4],
+  [2, 2],
+  [2, 2],
+  [4, 2],
+  [2, 2],
+  [2, 2],
+  [2, 2],
+  [2, 2],
+  [2, 2],
+]
+
+let count = 0
+const getColor = () => {
+  const color = colorsList[count]
+  if (colorsList[count + 1]) {
+    count += 1
+  } else {
+    count = 0
+  }
+  return color
+}
+
+const finalItems = menuItems.map((item, i) => ({
+  ...item,
+  width: sizes[i][0] || 2,
+  height: sizes[i][1] || 2,
+  color: getColor(),
+}))
 
 const SiteBoxes = props => {
   return (
     <SiteGrid>
       <Grid columns={4} gap={`${gutter}px`}>
-        {meniItems.map((item, i) => (
-          <StyledCell width={sizes[i][0]} height={sizes[i][1]} key={i}>
-            <Part key={i} to={item.url}>
+        {finalItems.map((item, i) => (
+          <StyledCell width={item.width} height={item.height} key={i}>
+            <Part color={item.color.color} key={i} to={item.url}>
               <Image style={{ backgroundImage: `url(${item.image})` }} />
               <Content>
-                <Title>{item.title}</Title>
+                <Title color={item.color} title={item.title} />
               </Content>
             </Part>
           </StyledCell>

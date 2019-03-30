@@ -1,4 +1,7 @@
 export const gutter = 12
+export const semi = 600
+export const regular = 400
+export const medium = 500
 
 export const textColor = '#dcdcdc'
 export const titleColor = '#FFF'
