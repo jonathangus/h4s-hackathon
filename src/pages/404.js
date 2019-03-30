@@ -1,7 +1,9 @@
 import React from 'react'
 
 export default function NotFound() {
-  window.location = '/'
+  if (typeof window !== 'undefined') {
+    window.location = '/'
+  }
 
   return null
 }

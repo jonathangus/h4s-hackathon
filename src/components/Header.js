@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   /* height: 150px; */
   margin-top: ${gutter * 3}px;
   transition: height ${baseTransition};
-  height: ${p => (p.full ? 150 : 75)}px;
+  height: ${p => (p.full ? 140 : 75)}px;
 
   a {
     height: 100%;
