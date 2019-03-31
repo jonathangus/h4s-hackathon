@@ -22,34 +22,23 @@ const Promoted = styled.div`
   margin-bottom: ${gutter * 6}px;
 `
 
-const Page = ({ data }) => {
-  const seo = get(data, 'allContentfulSeo.edges[0].node')
-  const title = get(data, 'contentfulText.headline')
-  const text = get(data, 'contentfulText.body.childMarkdownRemark.html')
-  const promoted = get(data, 'promoted.edges', []).map(n => n.node)
-
+const Page = ({ data, pageContext }) => {
+  const promoted = get(data, 'prizes.edges', []).map(n => n.node)
+  const seo = {
+    title: pageContext.page.title,
+  }
   return (
     <Grid>
       <Seo data={seo} />
-      <Intro>
-        <Prizes />
-        <Info>
-          <h1>{title}</h1>
-          <IntroText dangerouslySetInnerHTML={{ __html: text }} />
-        </Info>
-        <Promoted>
-          {promoted.map(prize => (
-            <PrizeElement color={colors.yellow} prize={prize} key={prize.id} />
-          ))}
-        </Promoted>
-        <PrizeGrid />
-      </Intro>
+      {promoted.map(prize => (
+        <PrizeElement color={colors.yellow} prize={prize} key={prize.id} />
+      ))}
     </Grid>
   )
 }
 
 export const query = graphql`
-  {
+  query($pageId: String) {
     contentfulText(
       node_locale: { eq: "en-US" }
       identifier: { eq: "hackathon-prizes" }
@@ -62,8 +51,8 @@ export const query = graphql`
       }
     }
 
-    promoted: allContentfulPrize(
-      filter: { node_locale: { eq: "en-US" }, category: { eq: "promoted" } }
+    prizes: allContentfulPrize(
+      filter: { node_locale: { eq: "en-US" }, category: { eq: $pageId } }
     ) {
       edges {
         node {
@@ -80,26 +69,6 @@ export const query = graphql`
             }
           }
           url
-        }
-      }
-    }
-
-    allContentfulSeo(
-      filter: { node_locale: { eq: "en-US" }, slug: { eq: "hackathon-prizes" } }
-    ) {
-      edges {
-        node {
-          title
-          description {
-            description
-          }
-          image {
-            file {
-              url
-              fileName
-              contentType
-            }
-          }
         }
       }
     }

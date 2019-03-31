@@ -39,7 +39,6 @@ const Wrapper = styled.div`
 `
 
 const Header = ({ full }) => {
-  console.log(full)
   return (
     <Grid>
       <Wrapper full={full || undefined}>

@@ -6,8 +6,6 @@ import media from '../media'
 
 const TitleElem = styled.h1`
   color: ${p => p.color};
-  display: flex;
-  align-items: center;
 
   ${media.phone`
     font-size: 32px;
@@ -16,6 +14,7 @@ const TitleElem = styled.h1`
 
 const Arrow = styled.div`
   margin-right: 8px;
+  display: inline-block;
   /* padding-top: 8px; */
 
   ${media.phone`

@@ -47,6 +47,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: ${semi};
         font-family:  ${titleFont};
         color: ${titleColor};
+        line-height:1.15;
       }
 
 

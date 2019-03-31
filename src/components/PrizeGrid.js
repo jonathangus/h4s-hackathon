@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import styled from 'styled-components'
 import { Link, StaticQuery, graphql } from 'gatsby'
@@ -64,18 +66,6 @@ const Content = styled.div`
   padding: 5px;
 `
 
-const sizes = [
-  [4, 8],
-  [2, 6],
-  [2, 6],
-  [4, 6],
-  [2, 4],
-  [2, 4],
-  [4, 8],
-  [2, 4],
-  [2, 4],
-]
-
 let count = 0
 const getColor = () => {
   const color = colorsList[count]
@@ -87,21 +77,47 @@ const getColor = () => {
   return color
 }
 
-const finalItems = menuItems.map((item, i) => ({
+const categories = [
+  {
+    url: '/co-working',
+    title: 'Co-working space',
+  },
+  {
+    url: '/fast-track',
+    title: 'Fast Track Program',
+  },
+  {
+    url: '/incubator',
+    title: 'Incubator Program',
+  },
+  {
+    url: '/mentorship',
+    title: 'Mentorship/ Consultant',
+  },
+  {
+    url: '/domain',
+    title: 'Domain, storage etc',
+  },
+  {
+    url: '/other',
+    title: 'Other',
+  },
+]
+
+const items = categories.map((item, i) => ({
   ...item,
-  width: sizes[i][0] || 2,
-  height: sizes[i][1] || 2,
+  width: 2,
+  height: 8,
   color: getColor(),
 }))
 
-const SiteBoxes = props => {
+const PrizeGrid = props => {
   return (
-    <SiteGrid>
+    <div>
       <Grid columns={4} gap={`${gutter}px`}>
-        {finalItems.map((item, i) => (
+        {items.map((item, i) => (
           <Cell width={item.width} height={item.height} key={i}>
             <Part color={item.color.color} key={i} to={item.url}>
-              <Image style={{ backgroundImage: `url(${item.image})` }} />
               <Content>
                 <Title color={item.color} title={item.title} />
               </Content>
@@ -109,31 +125,8 @@ const SiteBoxes = props => {
           </Cell>
         ))}
       </Grid>
-    </SiteGrid>
+    </div>
   )
 }
 
-export default () => (
-  <StaticQuery
-    render={SiteBoxes}
-    query={graphql`
-      {
-        image: allFile(
-          sort: { fields: name }
-          filter: { sourceInstanceName: { eq: "images" }, name: { eq: "dos" } }
-        ) {
-          edges {
-            node {
-              childImageSharp {
-                sizes(maxWidth: 220, quality: 95) {
-                  ...GatsbyImageSharpSizes_withWebp
-                  aspectRatio
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-  />
-)
+export default PrizeGrid
