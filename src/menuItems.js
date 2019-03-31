@@ -42,4 +42,8 @@ export default [
     url: '/prizes',
     image: prizes,
   },
+  {
+    title: 'Slack',
+    externalUrl: 'https://hackforsweden.slack.com',
+  },
 ]

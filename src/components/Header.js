@@ -5,6 +5,7 @@ import logo from '../../logo.png'
 import { gutter, baseTransition } from '../vars'
 import { Link } from 'gatsby'
 import media from '../media'
+import menuItems from '../menuItems'
 
 const Wrapper = styled.div`
   text-align: center;
@@ -38,13 +39,54 @@ const Wrapper = styled.div`
   }
 `
 
+const Main = styled.div`
+  flex: 1;
+`
+
+const Part = styled.div`
+  display: flex;
+  flex: 1;
+  /* flex-direction: column; */
+
+  a {
+    padding: 5px 0;
+    margin: 0 ${gutter * 1.5}px;
+    text-decoration: none;
+  }
+`
+
+const i = Math.round(menuItems.length / 2)
+const p1 = menuItems.slice(0, i)
+const p2 = menuItems.slice(i)
+
 const Header = ({ full }) => {
+  //full={full || undefined}
+  const getMenuItem = p =>
+    p.externalUrl ? (
+      <a
+        href={p.externalUrl}
+        key={p.url}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {p.title}
+      </a>
+    ) : (
+      <Link to={p.url} key={p.url}>
+        {p.title}
+      </Link>
+    )
+
   return (
     <Grid>
-      <Wrapper full={full || undefined}>
-        <Link to="/">
-          <img src={logo} />
-        </Link>
+      <Wrapper full>
+        <Part>{p1.map(getMenuItem)}</Part>
+        <Main>
+          <Link to="/">
+            <img src={logo} />
+          </Link>
+        </Main>
+        <Part>{p2.map(getMenuItem)}</Part>
       </Wrapper>
     </Grid>
   )
