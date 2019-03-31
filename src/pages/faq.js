@@ -7,7 +7,9 @@ import FAQItem from '../components/FAQItem'
 import Grid from '../components/Grid'
 
 const Page = ({ data }) => {
-  const seo = get(data, 'allContentfulSeo.edges[0].node')
+  const seo = {
+    title: 'FAQ',
+  }
   const faq = get(data, 'allContentfulFaq.edges', []).map(n => n.node)
 
   return (
@@ -37,25 +39,6 @@ export const query = graphql`
           body {
             childMarkdownRemark {
               html
-            }
-          }
-        }
-      }
-    }
-    allContentfulSeo(
-      filter: { node_locale: { eq: "en-US" }, slug: { eq: "hackathon-jury" } }
-    ) {
-      edges {
-        node {
-          title
-          description {
-            description
-          }
-          image {
-            file {
-              url
-              fileName
-              contentType
             }
           }
         }

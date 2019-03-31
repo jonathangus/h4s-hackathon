@@ -48,15 +48,15 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfigSecond,
     },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: 'UA-43885727-10',
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-43885727-12',
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify',
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-remove-serviceworker',
     {
       resolve: `gatsby-plugin-layout`,
       options: {

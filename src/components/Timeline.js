@@ -26,7 +26,18 @@ const Date = styled.div`
     top: 26px;
     bottom: 0;
     left: 50%;
-    display: block;
+    display: ${p => (p.last ? 'none' : 'block')};
+    background: white;
+  }
+
+  &:before {
+    content: '';
+    left: -16px;
+    width: 8px;
+    height: 2px;
+    top: 14px;
+    position: absolute;
+    display: ${p => (p.last ? 'block' : 'none')};
     background: white;
   }
 `
@@ -89,9 +100,6 @@ const Bar = styled.div`
 `
 
 const days = ['Thursday', 'Friday', 'Saturday']
-const dateDayOne = '2019-04-04'
-const dateDayTwo = '2019-04-05'
-const dateDayThree = '2019-04-06'
 
 const getDefaultDay = () => {
   if (Cookies.get('selectedDay')) {
@@ -107,11 +115,14 @@ const Timeline = ({ events }) => {
   const getEvent = event => (
     <Item key={event.id}>
       <Date>{dayjs(event.startTime).format('HH:mm')}</Date>
+      {event.endTime && (
+        <Date last>{dayjs(event.endTime).format('HH:mm')}</Date>
+      )}
       <Content>
         <Title>{event.title}</Title>
         <ExtraText
           dangerouslySetInnerHTML={{
-            __html: get(event, 'event.childMarkdownRemark.html'),
+            __html: get(event, 'text.childMarkdownRemark.html'),
           }}
         />
       </Content>
