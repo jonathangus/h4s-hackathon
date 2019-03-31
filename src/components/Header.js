@@ -15,25 +15,21 @@ const Wrapper = styled.div`
   transition: margin ${baseTransition};
   /* height: 150px; */
   margin-top: ${gutter * 3}px;
-  transition: height ${baseTransition};
-  height: ${p => (p.full ? 140 : 75)}px;
-
   a {
     height: 100%;
   }
 
-  ${media.phone`
-  height: ${p => (p.full ? 70 : 50)}px;
+  img {
+    transition: transform ${baseTransition};
+    height: 90px;
+
+    ${media.tablet`
+    height: 75px;
 
   `}
 
-  img {
-    transition: transform ${baseTransition};
-    transform: scale(${p => (p.full ? 1 : 0.5)});
-    height: 90%;
-
     ${media.phone`
-     transform: scale(${p => (p.full ? 1 : 0.75)});
+    height: 45px;
 
   `}
   }
@@ -46,7 +42,15 @@ const Main = styled.div`
 const Part = styled.div`
   display: flex;
   flex: 1;
-  /* flex-direction: column; */
+  flex-direction: column;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+  }
+
+  ${media.phone`
+    display: none;
+  `}
 
   a {
     padding: 5px 0;
