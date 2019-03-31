@@ -5,6 +5,7 @@ const contentful = require('contentful')
 import { gutter } from '../vars'
 import { StaticQuery, graphql } from 'gatsby'
 import logo from '../../logo.png'
+import dayjs from 'dayjs'
 
 const client = contentful.createClient({
   // This is the space ID. A space is like a project folder in Contentful terms
@@ -33,17 +34,23 @@ const Circle = styled.div`
 const Box = styled.div`
   display: flex;
   -webkit-box-pack: end;
-  justify-content: flex-end;
+  justify-content: flex-start;
   cursor: auto;
   pointer-events: none;
-  transform: translateX(0px) translateY(-50%);
   max-width: 250px;
   outline: none;
   
-}
+  
+}`
 
-
+const Item = styled.div`
+  margin-bottom: ${gutter}px;
+  transform: translateY(18px);
+  &:last-child {
+    margin-bottom: 0;
+  }
 `
+
 const Inner = styled.div`
   color: white;
   display: inline-block;
@@ -68,12 +75,20 @@ const Inner = styled.div`
     border-right: 0.5em solid dodgerblue;
   }
 `
-const Wrapper = styled.div`
-  margin: ${gutter * 6}px 0;
+
+const Container = styled.div`
+  margin: ${gutter * 6}px auto;
 
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
+  width: 300px;
+`
+const Items = styled.div`
+  flex: 1;
+`
+const Date = styled.div`
+  font-size: 13px;
 `
 
 const Message = props => {
@@ -85,7 +100,10 @@ const Message = props => {
         content_type: 'notice',
       })
       .then(entry => {
-        const items = get(entry, 'items', []).map(n => n.fields)
+        const items = get(entry, 'items', []).map(n => ({
+          ...n.fields,
+          created: n.sys.createdAt,
+        }))
         if (items) {
           setData(items)
         }
@@ -109,18 +127,21 @@ const Message = props => {
   }
 
   return (
-    <React.Fragment>
-      {data.map((d, k) => (
-        <Wrapper key={k}>
-          <Circle>
-            <img src={logo} />
-          </Circle>
-          <Box>
-            <Inner>{d.title}</Inner>
-          </Box>
-        </Wrapper>
-      ))}
-    </React.Fragment>
+    <Container>
+      <Circle>
+        <img src={logo} />
+      </Circle>
+      <Items>
+        {data.map((d, k) => (
+          <Item key={k}>
+            <Box>
+              <Inner>{d.title}</Inner>
+            </Box>
+            <Date>{dayjs(d.created).format('HH:mm')}</Date>
+          </Item>
+        ))}
+      </Items>
+    </Container>
   )
 }
 

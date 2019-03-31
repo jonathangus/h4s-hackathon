@@ -9,6 +9,7 @@ import Image from 'gatsby-image'
 import { gutter, textColor } from '../vars'
 import Title from '../components/Title'
 import colors from '../colors'
+import ArrowTitle from '../components/ArrowTitle'
 
 const juries = {
   mobility: {
@@ -97,7 +98,7 @@ const Face = styled.div`
     overflow: hidden;
   }
 `
-const StyledIntroText = styled(IntroText)`
+const StyledIntroText = styled.div`
   border-bottom: 1px solid ${textColor};
   margin-bottom: ${gutter}px;
   padding-bottom: ${gutter}px;
@@ -137,7 +138,7 @@ const Page = ({ data }) => {
 
         {Object.values(juries).map((item, i) => (
           <Part key={i}>
-            <Title title={`${item.title} Jury`} color={colors.blue} />
+            <ArrowTitle color={colors.blue}>{item.title} Jury</ArrowTitle>
             <Content>
               <Face>
                 <Image {...item.leader.image} />

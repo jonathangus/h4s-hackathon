@@ -9,6 +9,7 @@ import {
   gutter,
   primary,
 } from './vars'
+import media from './media'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -41,6 +42,14 @@ const GlobalStyle = createGlobalStyle`
 
       h1 {
         font-size: 48px;
+
+        ${media.phone`
+        font-size: 24px; 
+        `}
+
+        ${media.tablet`
+        font-size: 28px; 
+        `}
       }
       
       h1,h2,h3,h4 {

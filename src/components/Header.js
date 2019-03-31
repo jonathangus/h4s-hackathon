@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Grid from './Grid'
 import logo from '../../logo.png'
-import { gutter, baseTransition } from '../vars'
+import { gutter, baseTransition, semi } from '../vars'
 import { Link } from 'gatsby'
 import media from '../media'
 import menuItems from '../menuItems'
@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   margin-top: ${gutter * 3}px;
   a {
     height: 100%;
+    font-weight: ${semi};
   }
 
   img {

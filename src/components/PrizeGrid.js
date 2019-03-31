@@ -9,62 +9,11 @@ import { gutter, baseTransition } from '../vars'
 import colors from '../colors'
 import Title from './Title'
 import { Grid, Cell } from 'styled-css-grid'
+import GridItem from './GridItem'
 
 const { blue, green, magenta, yellow, white } = colors
 
 const colorsList = [green, blue, magenta, yellow, white]
-
-const Image = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.3s ease-in-out;
-`
-
-const Part = styled(Link)`
-  min-height: 100%;
-  /* height: 160px; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  text-decoration: none;
-  overflow: hidden;
-
-  @media (min-width: 800px) {
-    /* height: 270px; */
-  }
-
-  &:hover {
-    ${Image} {
-      transform: scale(1.1);
-    }
-  }
-
-  &:after {
-    z-index: 1;
-    content: '';
-    position: absolute;
-    display: block;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.9;
-    background: ${p => p.color};
-  }
-`
-
-const Content = styled.div`
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 5px;
-`
 
 let count = 0
 const getColor = () => {
@@ -81,47 +30,67 @@ const categories = [
   {
     url: '/co-working',
     title: 'Co-working space',
+    companies: ['The Park', 'GoTo10', 'NIH/Vinnova', 'WeWork', 'Acando'],
   },
   {
     url: '/fast-track',
     title: 'Fast Track Program',
+    companies: ['Antler', 'IBM'],
   },
   {
     url: '/incubator',
     title: 'Incubator Program',
+    companies: ['SISP', 'SSES', 'Ignite Sweden', 'Tillväxtverket'],
   },
   {
     url: '/mentorship',
     title: 'Mentorship/ Consultant',
+    companies: [
+      'Google Cloud',
+      'Valtech',
+      'Acando',
+      'Initiative of Change',
+      'Arbetsförmedlingen',
+    ],
   },
   {
     url: '/domain',
     title: 'Domain, storage etc',
+    companies: ['AWS', 'Internetstiftelsen', 'Nordix'],
   },
   {
     url: '/other',
     title: 'Other',
+    companies: [
+      'SingularityU Nordic',
+      "Expo 2020 - Committee for Sweden's Participation at Expo 2020",
+    ],
   },
 ]
 
 const items = categories.map((item, i) => ({
   ...item,
-  width: 2,
+  width: 3,
   height: 8,
   color: getColor(),
 }))
 
+const Extra = styled.div``
+
 const PrizeGrid = props => {
+  const getExtra = companies => <Extra>{companies.join(', ')}</Extra>
   return (
     <div>
-      <Grid columns={4} gap={`${gutter}px`}>
+      <Grid columns="repeat(auto-fit, minmax(120px, 1fr))" gap={`${gutter}px`}>
         {items.map((item, i) => (
           <Cell width={item.width} height={item.height} key={i}>
-            <Part color={item.color.color} key={i} to={item.url}>
-              <Content>
-                <Title color={item.color} title={item.title} />
-              </Content>
-            </Part>
+            <GridItem
+              color={item.color}
+              title={item.title}
+              key={i}
+              to={item.url}
+              extra={getExtra(item.companies)}
+            />
           </Cell>
         ))}
       </Grid>
