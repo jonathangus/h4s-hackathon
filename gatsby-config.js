@@ -65,3 +65,14 @@ module.exports = {
     },
   ],
 }
+
+const data = {
+  goalkeepers: [
+    {
+      name: 'Dahlin',
+      team: 'Malmö FF',
+      points: '0',
+      cost: '6,0',
+    },
+  ],
+}

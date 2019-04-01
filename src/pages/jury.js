@@ -29,6 +29,7 @@ const juries = {
       'Christian Landgren, CEO, Iteam Solutions',
       'Karin Åslund, Project Manager, Arbetsgivarverket',
       'Lauri Reuter, Senior Specialist of Disruptive Tech, Singularity University Nordics',
+      'Tim Gustafsson, Solution Architect, Amazon Web Services',
     ],
   },
   environment: {
