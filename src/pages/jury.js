@@ -66,7 +66,7 @@ const juries = {
       'Arash Sangari, Program Manager, Tillväxtverket',
       'Henrik Göthberg, Founder of Dairdux',
       'Gabriel Gardell, Project Manager, Uppsala Universitet',
-      'Karin Jansdotter, Enterprise Architect, Patent och Registreringsverket',
+      'Karin Jansdotter Queseth, Enterprise Architect, Patent och Registreringsverket',
     ],
   },
 }
