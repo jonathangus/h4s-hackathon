@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import get from 'lodash/get'
 const contentful = require('contentful')
-import { gutter } from '../vars'
+import { gutter, magenta, semi } from '../vars'
+import colors from '../colors'
 import { StaticQuery, graphql } from 'gatsby'
 import logo from '../../logo.png'
 import dayjs from 'dayjs'
+import Grid from './Grid'
+import media from '../media'
 
 const client = contentful.createClient({
   // This is the space ID. A space is like a project folder in Contentful terms
@@ -15,74 +18,35 @@ const client = contentful.createClient({
     '32b139b4ab821fea8b94650f32aafebe9f88a815e9482c71bf5c0a8681e18ec3',
 })
 
-const Circle = styled.div`
-  width: 32px;
-  height: 32px;
-  border: 1px solid white;
-  border-radius: 50%;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  img {
-    width: 80%;
-  }
-`
-
-const Box = styled.div`
-  display: flex;
-  -webkit-box-pack: end;
-  justify-content: flex-start;
-  cursor: auto;
-  pointer-events: none;
-  max-width: 250px;
-  outline: none;
-  
-  
-}`
-
 const Item = styled.div`
-  margin-bottom: ${gutter}px;
-  transform: translateY(18px);
+  margin-bottom: ${gutter * 2}px;
+  padding: ${gutter * 2}px;
+  text-align: center;
+  color: ${colors.magenta.getTextColor()};
+  font-weight: ${semi};
+  background: ${colors.magenta.color};
+  font-size: 18px;
+  border-radius: 4px;
+
   &:last-child {
     margin-bottom: 0;
   }
 `
 
-const Inner = styled.div`
-  color: white;
-  display: inline-block;
-  position: relative;
-  word-break: break-word;
-  background: rgb(57, 135, 216);
-  font: 19px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  border-radius: 1em;
-  padding: 0.5em 1em;
-  transition: transform 0.3s ease 0s, opacity 1.3s ease 0s;
-
-  &:after {
-    content: '';
-    display: block;
-    width: 1em;
-    height: 0.85em;
-    position: absolute;
-    left: -0.25em;
-    bottom: 0px;
-    border-bottom-right-radius: 100%;
-    z-index: -1;
-    border-right: 0.5em solid dodgerblue;
-  }
-`
+const Inner = styled.div``
 
 const Container = styled.div`
   margin: ${gutter * 6}px auto;
+  max-width: 380px;
+  text-align: center;
 
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 300px;
+  ${media.phone`
+  margin: ${gutter * 2}px auto;
+
+  `}
+  h2 {
+    margin-bottom: ${gutter}px;
+  }
 `
 const Items = styled.div`
   flex: 1;
@@ -126,21 +90,21 @@ const Message = props => {
     return null
   }
 
+  if (data.length === 0) return null
+
   return (
     <Container>
-      <Circle>
-        <img src={logo} />
-      </Circle>
-      <Items>
-        {data.map((d, k) => (
-          <Item key={k}>
-            <Box>
+      <Grid>
+        <h2>Latest news:</h2>
+        <Items>
+          {data.map((d, k) => (
+            <Item key={k}>
               <Inner>{d.title}</Inner>
-            </Box>
-            <Date>{dayjs(d.created).format('HH:mm')}</Date>
-          </Item>
-        ))}
-      </Items>
+              {/* <Date>{dayjs(d.created).format('HH:mm')}</Date> */}
+            </Item>
+          ))}
+        </Items>
+      </Grid>
     </Container>
   )
 }

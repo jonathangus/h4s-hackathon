@@ -12,7 +12,7 @@ const Container = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 3121;
   display: none;
   justify-content: space-evenly;
 
@@ -29,7 +29,7 @@ const Item = styled(Link)`
   justify-content: center;
   flex-direction: column;
   font-size: 12px;
-  padding: ${gutter}px 0;
+  padding: ${gutter * 1.5}px 0;
   flex-grow: 1;
   display: flex;
   color: ${p => (p.active ? primary : white)};
@@ -76,7 +76,7 @@ const MobileFooter = ({ path }) => {
           to={item.url}
           key={i}
         >
-          <FontAwesomeIcon icon={item.icon} />
+          {/* <FontAwesomeIcon icon={item.icon} /> */}
           <Label>{item.title}</Label>
         </Item>
       ))}

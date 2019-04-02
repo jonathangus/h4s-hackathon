@@ -45,7 +45,7 @@ const Part = styled.div`
   flex: 1;
   flex-direction: column;
 
-  @media (min-width: 900px) {
+  @media (min-width: 1075px) {
     flex-direction: row;
   }
 

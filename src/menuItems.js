@@ -5,6 +5,8 @@ import challenges from '../images/challenges.jpg'
 import faq from '../images/faq.jpg'
 import jury from '../images/jury.jpg'
 import prizes from '../images/prizes.jpg'
+import map from '../images/map.png'
+import slack from '../images/slack.jpg'
 
 export default [
   {
@@ -18,9 +20,9 @@ export default [
     image: faq,
   },
   {
-    title: 'Expo',
-    url: '/expo',
+    title: 'Map',
     image: expo,
+    externalUrl: map,
   },
   {
     title: 'Challenges',
@@ -45,5 +47,15 @@ export default [
   {
     title: 'Slack',
     externalUrl: 'https://hackforsweden.slack.com',
+    image: slack,
+  },
+  {
+    title: 'Instructions',
+    url: '/instructions',
+  },
+
+  {
+    title: 'Resources',
+    url: '/resources',
   },
 ]

@@ -112,23 +112,25 @@ const Timeline = ({ events }) => {
   const groups = groupBy(events, event => dayjs(event.startTime).day())
   const items = groups[selectedDay + 3] || []
 
-  const getEvent = event => (
-    <Item key={event.id}>
-      <Date>{dayjs(event.startTime).format('HH:mm')}</Date>
-      {event.endTime && (
-        <Date last>{dayjs(event.endTime).format('HH:mm')}</Date>
-      )}
-      <Content>
-        <Title>{event.title}</Title>
-        <ExtraText
-          dangerouslySetInnerHTML={{
-            __html: get(event, 'text.childMarkdownRemark.html'),
-          }}
-        />
-      </Content>
-    </Item>
-  )
-
+  const getEvent = event => {
+    console.log(dayjs(event.startTime).format('HH:mm'), event)
+    return (
+      <Item key={event.id}>
+        <Date>{dayjs(event.startTime).format('HH:mm')}</Date>
+        {event.endTime && (
+          <Date last>{dayjs(event.endTime).format('HH:mm')}</Date>
+        )}
+        <Content>
+          <Title>{event.title}</Title>
+          <ExtraText
+            dangerouslySetInnerHTML={{
+              __html: get(event, 'text.childMarkdownRemark.html'),
+            }}
+          />
+        </Content>
+      </Item>
+    )
+  }
   const _setSelectedDay = day => {
     setSelectedDay(day)
     Cookies.set('selectedDay', day)

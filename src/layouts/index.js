@@ -34,7 +34,7 @@ const TemplateWrapper = ({ children, location: { pathname } }) => {
         <link rel="shortcut icon" type="image/png" href={favicon} />
       </Helmet>
       <GlobalStyle />
-      <MobileFooter path={path} />
+      {path !== '/' && <MobileFooter path={path} />}
     </LocaleContextProvider>
   )
 }
