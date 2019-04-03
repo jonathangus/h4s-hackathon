@@ -35,10 +35,10 @@ export default [
     image: partnerTrack,
   },
   {
-    title: 'Jury',
-    url: '/jury',
-    image: jury,
+    title: 'Hack Instructions',
+    url: '/instructions',
   },
+
   {
     title: 'Prizes',
     url: '/prizes',
@@ -49,9 +49,11 @@ export default [
     externalUrl: 'https://hackforsweden.slack.com',
     image: slack,
   },
+
   {
-    title: 'Instructions',
-    url: '/instructions',
+    title: 'Jury',
+    url: '/jury',
+    image: jury,
   },
 
   {
