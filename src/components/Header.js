@@ -15,6 +15,8 @@ const Wrapper = styled.div`
   transition: margin ${baseTransition};
   /* height: 150px; */
   margin-top: ${gutter * 3}px;
+  margin-bottom: ${gutter * 2}px;
+
   a {
     height: 100%;
     font-weight: ${semi};
