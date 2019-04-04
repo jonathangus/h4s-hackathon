@@ -125,9 +125,6 @@ export default () => (
             node {
               id
               title
-              text {
-                id
-              }
             }
           }
         }
