@@ -100,7 +100,7 @@ const Message = props => {
         <Items>
           {data.map((d, k) => (
             <Item key={k}>
-              <Inner>{d.title}</Inner>
+              <Inner dangerouslySetInnerHTML={{ __html: d.title }} />
               {/* <Date>{dayjs(d.created).format('HH:mm')}</Date> */}
             </Item>
           ))}
