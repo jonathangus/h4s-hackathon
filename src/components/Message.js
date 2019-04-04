@@ -77,6 +77,7 @@ const Message = props => {
   }
 
   useEffect(() => {
+    fetchData()
     const id = setInterval(() => {
       fetchData()
     }, 30000)
@@ -109,29 +110,4 @@ const Message = props => {
   )
 }
 
-export default () => (
-  <StaticQuery
-    render={data => {
-      return (
-        <Message
-          notices={get(data, 'allContentfulNotice.edges', []).map(n => n.node)}
-        />
-      )
-    }}
-    query={graphql`
-      {
-        allContentfulNotice(filter: { node_locale: { eq: "en-US" } }) {
-          edges {
-            node {
-              id
-              title
-              text {
-                id
-              }
-            }
-          }
-        }
-      }
-    `}
-  />
-)
+export default Message
