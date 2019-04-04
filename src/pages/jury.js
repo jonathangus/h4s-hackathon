@@ -39,7 +39,7 @@ const juries = {
       'Lars Wiigh, EU & Business Development Executive, IBM',
       'Anne Årneby, CEO, Nordic Morning',
       'Lars Boström, Webb Coordinator, Konsumentverket',
-      'Louise König, Sustainability Director, Coop',
+      'Louise König, Senior Advisor, Louise König & Co.',
     ],
   },
   business: {

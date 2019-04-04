@@ -105,13 +105,14 @@ const getDefaultDay = () => {
   if (Cookies.get('selectedDay')) {
     return parseInt(Cookies.get('selectedDay'), 10)
   }
+  return 1
 }
 
 const Timeline = ({ events }) => {
   const [selectedDay, setSelectedDay] = useState(getDefaultDay())
   const groups = groupBy(events, event => dayjs(event.startTime).day())
   const items = groups[selectedDay + 3] || []
-
+  console.log({ groups, items })
   const getEvent = event => {
     console.log(dayjs(event.startTime).format('HH:mm'), event)
     return (
