@@ -28,6 +28,10 @@ const Item = styled.div`
   font-size: 18px;
   border-radius: 4px;
 
+  a {
+    color: ${colors.magenta.getTextColor()};
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
